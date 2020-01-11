@@ -1,0 +1,293 @@
+body {
+  margin: 0;
+  background-color: rgb(228, 228, 228);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(220, 220, 220);
+}
+
+.frame {
+  background-color: rgb(180, 134, 91);
+  box-shadow: inset -1px 1px 7px rgba(0, 0, 0, 0.2),
+    inset 1px -1px 7px rgba(0, 0, 0, 0.2), 1px 12px 5px rgba(0, 0, 0, 0.4),
+    4px 3px 8px rgba(0, 0, 0, 0.4), 5px 10px 10px rgba(0, 0, 0, 0.2),
+    -5px 10px 10px rgba(0, 0, 0, 0.4);
+  width: 400px;
+  height: 450px;
+  margin: 100px auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.main-screen {
+  background: rgba(40, 40, 40, 1) -webkit-radial-gradient(center, rgba(40, 80, 60, 1), rgba(0, 20, 20, 0.6));
+  height: 360px;
+  width: 360px;
+  position: relative;
+  top: 45px;
+  left: 20px;
+}
+
+.title {
+  padding: 50px;
+}
+
+.option {
+  margin-top: -20px;
+  color: rgb(140, 140, 140);
+  font-size: 26px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  user-select: none;
+  outline: none;
+  padding: 5px;
+}
+
+.option:hover {
+  color: rgb(220, 220, 220);
+  border: 2px solid rgb(220, 220, 220);
+}
+
+#choose-player-one {
+  margin-right: 10px;
+}
+
+#choose-player-two {
+  margin-left: 10px;
+}
+
+.back-button {
+  display: block;
+  margin: 50px auto;
+}
+
+#difficulty-screen {
+  display: none;
+}
+
+#choose-easy-diff {
+  margin-right: 10px;
+}
+
+#choose-hard-diff {
+  margin-left: 10px;
+}
+
+#choose-x-o-screen {
+  display: none;
+}
+
+#choose-x-o-screen .back-button {
+  margin-top: 43px;
+}
+
+#choose-x {
+  font-size: 40px;
+}
+
+#choose-o {
+  font-size: 40px;
+}
+
+#game-board-screen {
+  flex-wrap: wrap;
+  display: none;
+  user-select: none;
+}
+
+.turn-indicator-container {
+  position: absolute;
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+  bottom: 405px;
+  color: white;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+}
+
+.turn-indicator {
+  width: 170px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  position: relative;
+  top: 50px;
+}
+
+#left-turn-indicator {
+  background-color: rgb(0, 200, 200);
+}
+
+#right-turn-indicator {
+  background-color: rgb(200, 100, 100);
+}
+
+.scores {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 364px;
+  color: rgb(100, 60, 50);
+}
+
+.scores p {
+  margin: 0;
+}
+
+.player {
+  margin: 0 25px;
+  width: 70px;
+}
+
+.board-field {
+  font-family: "Gochi Hand", cursive;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  font-size: 120px;
+  box-sizing: border-box;
+  border: 1px solid rgb(150, 150, 150);
+}
+
+#field-00 {
+  border-left: none;
+  border-top: none;
+}
+
+#field-01 {
+  border-top: none;
+}
+
+#field-02 {
+  border-top: none;
+  border-right: none;
+}
+#field-10 {
+  border-left: none;
+}
+
+#field-12 {
+  border-right: none;
+}
+
+#field-20 {
+  border-left: none;
+  border-bottom: none;
+}
+
+#field-21 {
+  border-bottom: none;
+}
+
+#field-22 {
+  border-bottom: none;
+  border-right: none;
+}
+
+.field-player-one {
+  color: rgb(0, 200, 200);
+  background-color: #111;
+}
+
+.field-player-two {
+  color: rgb(200, 100, 100);
+  background-color: #111;
+}
+
+.reset-container {
+  text-align: right;
+  width: 100%;
+}
+
+#reset-button {
+  color: rgb(100, 60, 50);
+  margin: 6.5px 20px 0 0;
+  background-color: transparent;
+  border: 2px solid transparent;
+  font-size: 16px;
+  width: 80px;
+  cursor: pointer;
+  padding: 5px;
+  outline: none;
+  user-select: none;
+}
+
+#reset-button:hover {
+  border: 2px solid rgb(100, 60, 50);
+  border-radius: 20px;
+}
+
+#game-over-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 360px;
+  background-color: rgba(0, 20, 20, 0.9);
+  font-size: 36px;
+  display: none;
+}
+
+@media (max-width: 420px) {
+  #choose-x-o-message {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .frame {
+    width: 300px;
+  }
+  .main-screen {
+    width: 270px;
+    left: 15px;
+  }
+  #start-screen button {
+    padding: 5px;
+  }
+  #choose-player-one {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  #choose-player-two {
+    margin-left: 0;
+  }
+
+  .back-button {
+    margin-top: 30px;
+  }
+
+  #choose-x-o-screen .back-button {
+    margin-top: 23px;
+  }
+
+  .board-field {
+    width: 90px;
+    font-size: 100px;
+  }
+
+  .player {
+    margin: 0 7.5px;
+  }
+
+  #reset-button {
+    margin-right: 5px;
+  }
+
+  .turn-indicator-container {
+    width: 270px;
+  }
+
+  .turn-indicator {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    top: 40px;
+  }
+}

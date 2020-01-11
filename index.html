@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tic Tac Toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="tictactoe.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Gochi+Hand|Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="turn-indicator-container">
+      <div id="left-turn-indicator" class="turn-indicator"></div>
+      <div id="right-turn-indicator" class="turn-indicator"></div>
+    </div>
+    <div class="frame">
+      <div class="main-screen">
+        <div id="start-screen">
+          <h1 class="title">Choose game mode</h1>
+          <button id="choose-player-one" class="option">
+            One Player
+          </button>
+          <button id="choose-player-two" class="option">
+            Two Player
+          </button>
+        </div>
+        <div id="difficulty-screen">
+          <h1 class="title">Choose difficulty level</h1>
+          <button id="choose-easy-diff" class="option">Easy</button>
+          <button id="choose-hard-diff" class="option">
+            Hard
+          </button>
+          <button class="back-button option">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+        </div>
+        <div id="choose-x-o-screen">
+          <h1 id="choose-x-o-message" class="title"></h1>
+          <button id="choose-x" class="option">X</button>
+          <button id="choose-o" class="option">O</button>
+          <button class="back-button option">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+        </div>
+        <div id="game-board-screen">
+          <div class="scores">
+            <div class="player-one player">
+              <div id="player-one-score">0</div>
+              <p>Player 1</p>
+            </div>
+            <div class="player-two player">
+              <div id="player-two-score">0</div>
+              <p id="player2-computer"></p>
+            </div>
+          </div>
+          <div id="field-00" class="board-field"></div>
+          <div id="field-01" class="board-field"></div>
+          <div id="field-02" class="board-field"></div>
+          <div id="field-10" class="board-field"></div>
+          <div id="field-11" class="board-field"></div>
+          <div id="field-12" class="board-field"></div>
+          <div id="field-20" class="board-field"></div>
+          <div id="field-21" class="board-field"></div>
+          <div id="field-22" class="board-field"></div>
+          <div class="reset-container">
+            <button id="reset-button">Reset All</button>
+          </div>
+          <div id="game-over-screen"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="tictactoe.js"></script>
+  </body>
+</html>
